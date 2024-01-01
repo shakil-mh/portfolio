@@ -1,0 +1,50 @@
+
+/* Tablet View */
+
+@media (width <= 768px){
+
+    header .container{
+        padding: 0.5rem;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .logo img{
+    max-width: 150px;
+    }
+
+    .menu_btn{
+        display: flex;
+    }
+
+
+    .content{
+    padding-right: 0;
+    padding-top: clamp(40dvh, 55vw, 50dvh);
+    margin-top: 2.5rem;
+    /* justify-content: end; */
+    background-position-x: center;
+    background-position-y: top;
+    /* background-size: 30vh; */
+    min-height: 80dvh;
+   }
+
+   .btn_box{
+    margin: 0;
+    padding: 1rem 0;
+    justify-content: center;
+   }
+
+}
+
+/* Mobile View */
+
+@media (width <= 426px){
+
+
+    .container{
+        padding: 0 .7rem;
+    }
+}

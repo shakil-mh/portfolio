@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'Acme';
+    src:
+    local('Acme'),
+    local('acme'),
+    url('../fonts/Acme-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mothproof_Script';
+    src:
+    local('Mothproof_Script'),
+    local('mothproof_script'),
+    url('../fonts/Mothproof_Script-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Acme", sans-serif;
+    color: white;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+:root{
+    --main-color: hsl(230, 82%, 9%);
+    --secondary-color: hsl(300, 100%, 50%);
+    --gradient: linear-gradient(135deg, hsl(0, 0%, 20%), hsl(240, 60%, 11%));
+    --default-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+    --transition: .1s ease-in-out;
+    --img-size: calc(((100vw + 100vh) / 2) * .4);
+    --text-gradient: linear-gradient(hsl(0, 0%, 100%), hsl(0, 100%, 55%));
+}
+
+body{
+    background: var(--gradient);
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--gradient);
+    box-shadow: var(--default-box-shadow);
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Mothproof_Script", "Acme", sans-serif;
+    font-size: 1.6rem;
+    height: 35px;
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* .logo img{
+    max-width: 150px;
+    cursor: pointer;
+} */
+
+nav{
+    padding: .3rem;
+}
+
+nav a{
+    padding: .05rem 1rem;
+    border-radius: .3rem;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.menu_btn{
+    position: relative;
+    cursor: pointer;
+    border: 2px solid transparent;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 3px;
+    border-radius: .3rem;
+    margin-right: 5px;
+}
+
+.bar-1, .bar-2, .bar-3{
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    transition: 0.2s ease-in-out;
+}
+
+.clicked .bar-1{
+    transform: translateY(8px) rotate(-45deg);
+    border-radius: 1rem;
+    width: 20px;
+}
+
+.clicked .bar-2{
+    opacity: 0;
+    width: 0;
+}
+
+.clicked .bar-3{
+    transform: translateY(-8px) rotate(45deg);
+    border-radius: 1rem;
+}
+
+.home{
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .2rem;
+    padding: 3rem 24vw 0 0;
+    padding-right: 30%;
+    min-height: 90dvh;
+    background: url("../images/IMG_20211214_032330\ Final.png") no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+    background-size: clamp(180px, var(--img-size), 430px);
+    /* background-size: 30vw; */
+}
+
+.content h2{
+    color: var(--secondary-color);
+}
+
+.content p{
+    text-align: justify;
+}
+
+.btn_box{
+    margin-top: 5rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.btn_box button{
+    position: relative;
+    background: var(--gradient);
+    font-size: 1.2rem;
+    padding: .3rem 1rem;
+    border-radius: .3rem;
+    border: 2px solid var(--main-color);
+    box-shadow: var(--default-box-shadow);
+    transition: var(--transition);
+}
+
+.media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: auto;
+    margin-bottom: 1rem;
+}
+
+.media a{
+    position: relative;
+    border: 2px solid var(--main-color);
+    font-size: 1.2rem;
+    background: var(--gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+    border-radius: .3rem;
+    box-shadow: var(--default-box-shadow);
+}
