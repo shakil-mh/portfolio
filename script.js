@@ -1,9 +1,3 @@
-
-function showMessage() {
-    
-}
-
-
 // Showing Menu
 
 const menuBtn = document.getElementsByClassName("menu_btn")[0];

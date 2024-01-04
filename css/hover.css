@@ -1,6 +1,6 @@
 
 :root{
-    --hover-gradiant: linear-gradient(45deg, hsl(192, 100%, 50%), #0e1538, hsl(300, 100%, 50%));
+    --hover-gradient: linear-gradient(45deg, hsl(192, 100%, 50%), #0e1538, hsl(300, 100%, 50%));
     --btn-background: hsla(231, 83%, 9%, 0.45);
     --transition-hover: .2s ease-in-out;
 }
@@ -28,19 +28,19 @@ nav a:hover,
 nav a:hover .hover,
 .menu_btn:hover .hover,
 .media a:hover .hover{
-    background: var(--hover-gradiant);
+    background: var(--hover-gradient);
     width: calc(100% + 6px);
     height: calc(100% + 6px);
     inset: -3px;
-    border-radius: 0.3rem;
+    border-radius: 0.4rem;
 }
 
 .btn_box button:hover .hover-2{
-    background: var(--hover-gradiant);
+    background: var(--hover-gradient);
     width: calc(100% + 8px);
     height: calc(100% + 8px);
     inset: -4px;
-    border-radius: 0.5rem;
+    border-radius: 0.45rem;
 }
 
 nav a:hover .blur,

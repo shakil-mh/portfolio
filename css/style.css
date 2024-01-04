@@ -35,12 +35,11 @@
     --default-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
     --transition: .1s ease-in-out;
     --img-size: calc(((100vw + 100vh) / 2) * .4);
-    --text-gradient: linear-gradient(hsl(0, 0%, 100%), hsl(0, 100%, 55%));
+    --text-gradient: linear-gradient(hsl(0, 0%, 100%), hsl(245, 100%, 55%));
 }
 
 body{
-    background: var(--gradient);
-    height: 100vh;
+    background: var(--main-color);
 }
 
 a{
@@ -65,7 +64,7 @@ header .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 0.2rem 1rem;
 }
 
 .logo{
@@ -76,14 +75,9 @@ header .container{
     font-size: 1.6rem;
     height: 35px;
     background: var(--text-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
-
-/* .logo img{
-    max-width: 150px;
-    cursor: pointer;
-} */
 
 nav{
     padding: .3rem;
@@ -107,7 +101,6 @@ nav a{
     gap: 5px;
     padding: 3px;
     border-radius: .3rem;
-    margin-right: 5px;
 }
 
 .bar-1, .bar-2, .bar-3{
@@ -134,31 +127,45 @@ nav a{
 }
 
 .home{
-    min-height: 100dvh;
+    min-height: 100svh;
+    background: var(--gradient);
+}
+
+.home > .container{
     display: flex;
     flex-direction: column;
+    min-height: 100svh;
+    padding-top: 3rem;
 }
 
 .content{
     display: flex;
-    flex-direction: column;
+    flex-grow: 1;
     justify-content: center;
-    gap: .2rem;
-    padding: 3rem 24vw 0 0;
-    padding-right: 30%;
-    min-height: 90dvh;
-    background: url("../images/IMG_20211214_032330\ Final.png") no-repeat;
-    background-position-x: right;
-    background-position-y: center;
-    background-size: clamp(180px, var(--img-size), 430px);
-    /* background-size: 30vw; */
 }
 
-.content h2{
+.content_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content_img{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.content_img img{
+    max-width: 100%;
+    min-width: 300px;
+}
+
+.content_text h2{
     color: var(--secondary-color);
 }
 
-.content p{
+.content_text p{
     text-align: justify;
 }
 
@@ -166,6 +173,8 @@ nav a{
     margin-top: 5rem;
     display: flex;
     gap: 2rem;
+    justify-content: center;
+    z-index: 3;
 }
 
 .btn_box button{
@@ -185,7 +194,9 @@ nav a{
     align-items: center;
     gap: 1rem;
     margin-top: auto;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
+    padding: 1rem 0;
+    z-index: 3;
 }
 
 .media a{

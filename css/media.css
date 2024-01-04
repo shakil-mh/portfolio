@@ -1,50 +1,61 @@
 
 /* Tablet View */
 
-@media (width <= 768px){
+@media (orientation:portrait), (width <= 768px){
 
-    header .container{
-        padding: 0.5rem;
+    .home > .container{
+        padding-top: 2.8rem;
     }
 
     nav{
         display: none;
     }
 
-    .logo img{
-    max-width: 150px;
-    }
-
     .menu_btn{
         display: flex;
     }
 
-
     .content{
-    padding-right: 0;
-    padding-top: clamp(40dvh, 55vw, 50dvh);
-    margin-top: 2.5rem;
-    /* justify-content: end; */
-    background-position-x: center;
-    background-position-y: top;
-    /* background-size: 30vh; */
-    min-height: 80dvh;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
    }
 
-   .btn_box{
-    margin: 0;
-    padding: 1rem 0;
-    justify-content: center;
+   .content_text{
+    margin-top: -4rem;
+}
+
+   .content_img img{
+    height: clamp(250px, 60vw, 50svh);
+    min-width: auto;
    }
+   
+   .btn_box{
+       padding: .5rem 0;
+       margin-top: 2rem;
+    }
 
 }
 
 /* Mobile View */
 
 @media (width <= 426px){
-
-
+    
+    header .container{
+        padding: 0.2rem .6rem;
+        
+    }
+    
     .container{
         padding: 0 .7rem;
     }
+    
+    .content_text{
+        flex-grow: 1;
+        margin-top: -1rem;
+    }
+    
+    .btn_box{
+        margin-top: auto;
+    }
+
 }
