@@ -8,7 +8,32 @@
     }
 
     nav{
-        display: none;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(20px);
+        width: 200px;
+        padding: 0;
+        overflow: hidden;
+        transform: translateX(3rem);
+        opacity: 0;
+        border-radius: .3rem;
+        transition: var(--transition);
+        gap: .2rem;
+    }
+    
+    nav a{
+        background: rgba(0, 0, 0, 0.3); 
+    }
+    
+    .show_menu{
+        transform: translateX(0);
+        overflow: auto;
+        opacity: 1;
+        padding: .3rem;
     }
 
     .menu_btn{
@@ -25,7 +50,7 @@
 }
 
    .content_img img{
-    height: clamp(250px, 60vw, 50svh);
+    height: clamp(300px, 60vw, 50svh);
     min-width: auto;
    }
    
@@ -42,7 +67,6 @@
     
     header .container{
         padding: 0.2rem .6rem;
-        
     }
     
     .container{
@@ -55,7 +79,7 @@
     }
     
     .btn_box{
-        margin-top: auto;
+        margin: auto 0;
     }
 
 }
