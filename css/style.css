@@ -125,7 +125,6 @@ nav a{
     transform: translateY(-8px) rotate(45deg);
     border-radius: 1rem;
 }
-
 .home{
     min-height: 100svh;
     background: var(--gradient);
@@ -159,6 +158,11 @@ nav a{
 .content_img img{
     max-width: 100%;
     min-width: 300px;
+    transition: var(--transition);
+}
+
+.img_slide{
+    padding-right: 115px;
 }
 
 .content_text h2{
@@ -194,7 +198,6 @@ nav a{
     align-items: center;
     gap: 1rem;
     margin-top: auto;
-    /* margin-bottom: 1rem; */
     padding: 1rem 0;
     z-index: 3;
 }
@@ -207,7 +210,7 @@ nav a{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .3rem;
+    padding: .3rem .4rem;
     border-radius: .3rem;
     box-shadow: var(--default-box-shadow);
 }

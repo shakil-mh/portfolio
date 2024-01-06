@@ -5,6 +5,7 @@
     --transition-hover: .2s ease-in-out;
 }
 
+.focus, .focus_blur,
 .hover,
 .hover-2{
     position: absolute;
@@ -25,6 +26,7 @@ nav a:hover,
     transition: var(--transition-hover);
 }
 
+.focus, .focus_blur,
 nav a:hover .hover,
 .menu_btn:hover .hover,
 .media a:hover .hover{
@@ -32,7 +34,7 @@ nav a:hover .hover,
     width: calc(100% + 6px);
     height: calc(100% + 6px);
     inset: -3px;
-    border-radius: 0.4rem;
+    border-radius: 0.35rem;
 }
 
 .btn_box button:hover .hover-2{
@@ -49,4 +51,10 @@ nav a:hover .blur,
 .media a:hover .blur{
     filter: blur(10px);
 }
+
+.focused{
+    background: var(--btn-background);
+    border: 2px solid var(--main-color);
+}
+
 

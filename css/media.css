@@ -15,14 +15,16 @@
         right: 0;
         background: rgba(255, 255, 255, 0.05);
         backdrop-filter: blur(20px);
-        width: 200px;
-        padding: 0;
+        width: 150px;
+        padding: .3rem;
         overflow: hidden;
+        pointer-events: none;
         transform: translateX(3rem);
         opacity: 0;
         border-radius: .3rem;
         transition: var(--transition);
         gap: .2rem;
+        box-shadow: var(--default-box-shadow);
     }
     
     nav a{
@@ -33,7 +35,7 @@
         transform: translateX(0);
         overflow: auto;
         opacity: 1;
-        padding: .3rem;
+        pointer-events: all;
     }
 
     .menu_btn{
