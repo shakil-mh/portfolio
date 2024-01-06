@@ -15,7 +15,7 @@
         right: 0;
         background: rgba(255, 255, 255, 0.05);
         backdrop-filter: blur(20px);
-        width: 150px;
+        width: 200px;
         padding: .3rem;
         overflow: hidden;
         pointer-events: none;

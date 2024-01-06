@@ -17,6 +17,7 @@
     transition: var(--transition-hover);
 }
 
+.cover:hover,
 nav a:hover,
 .menu_btn:hover,
 .btn_box button:hover,
@@ -27,6 +28,7 @@ nav a:hover,
 }
 
 .focus, .focus_blur,
+.cover:hover .hover,
 nav a:hover .hover,
 .menu_btn:hover .hover,
 .media a:hover .hover{
@@ -45,6 +47,7 @@ nav a:hover .hover,
     border-radius: 0.45rem;
 }
 
+.cover:hover .blur,
 nav a:hover .blur,
 .menu_btn:hover .blur,
 .btn_box button:hover .blur,

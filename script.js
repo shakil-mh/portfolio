@@ -8,11 +8,25 @@ const menu = document.getElementsByTagName("nav")[0];
 function showMenu() {
 
     const menuBtnHover = document.querySelector(".menu_btn > .hover");
-    const img = document.querySelector(".content_img img");
 
     menuBtn.classList.toggle("clicked");
     menuBtn.classList.toggle("focused");
     menu.classList.toggle("show_menu");
     menuBtnHover.classList.toggle("focus");
-    img.classList.toggle("img_slide");
+    
+}
+
+// Hide 
+
+const msgBg = document.getElementsByClassName("msg_bg")[0];
+
+console.log(msgBg);
+
+setTimeout(()=>{
+    msgBg.classList.add("show_msg");
+}, 2000)
+
+function hideMessage(){
+    msgBg.classList.remove("show_msg");
+
 }
