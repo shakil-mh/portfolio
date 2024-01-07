@@ -52,8 +52,7 @@
 }
 
    .content_img img{
-    height: clamp(300px, 60vw, 50svh);
-    min-width: auto;
+    max-width: 245px;
    }
    
    .btn_box{

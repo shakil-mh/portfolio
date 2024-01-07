@@ -30,13 +30,13 @@
 
 :root{
     --main-color: hsl(230, 82%, 9%);
-    --secondary-color: hsl(225, 100%, 50%);
+    --secondary-color: hsl(245, 100%, 55%);
     --gradient: linear-gradient(135deg, hsl(0, 0%, 20%), hsl(240, 60%, 11%));
     --default-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
     --transition: .1s ease-in-out;
     --img-size: calc(((100vw + 100vh) / 2) * .4);
     --text-gradient: linear-gradient(hsl(0, 0%, 100%), hsl(245, 100%, 55%));
-    --heading-gradient: linear-gradient(rgb(255, 61, 61), rgb(209, 0, 0));
+    --heading-gradient: linear-gradient(hsl(0, 100%, 65%), hsl(0, 100%, 55%));
 }
 
 body{
@@ -70,12 +70,13 @@ a{
 }
 
 .msg_box{
-    background: rgba(255, 255, 255, 0.1);
+    background: hsla(0, 0%, 50%, 0.5);
     border-radius: .4rem;
     overflow: hidden;
-    max-width: 400px;
+    width: 400px;
     box-shadow: var(--default-box-shadow);
     backdrop-filter: blur(20px);
+    margin: 0 1rem;
 }
 
 .msg_heading{
@@ -86,7 +87,6 @@ a{
     padding: 0 .2rem;
     position: relative;
     z-index: -1;
-    /* box-shadow: var(--default-box-shadow); */
 }
 
 .msg_heading h3{
@@ -122,6 +122,7 @@ a{
 
 .message p{
     text-align: center;
+    text-wrap: pretty;
 }
 
 .container{
@@ -186,23 +187,32 @@ nav a{
     width: 23px;
     height: 3px;
     background-color: white;
-    transition: 0.2s ease-in-out;
+    transform-origin: center;
+    transition: translate 100ms ease-in 100ms,
+                rotate 100ms ease-in,
+                width 0ms 100ms;
 }
 
 .clicked .bar-1{
-    transform: translateY(8px) rotate(-45deg);
+    translate: 0px 8px;
+    rotate: -45deg;
     border-radius: 1rem;
+    transition: translate 100ms ease-in,
+                rotate 100ms ease-in 100ms;
 }
 
 .clicked .bar-2{
-    opacity: 0;
     width: 0;
 }
 
 .clicked .bar-3{
-    transform: translateY(-8px) rotate(45deg);
+    translate: 0px -8px;
+    rotate: 45deg;
     border-radius: 1rem;
+    transition: translate 100ms ease-in,
+                rotate 100ms ease-in 100ms;
 }
+
 .home{
     min-height: 100svh;
     background: var(--gradient);
@@ -234,8 +244,7 @@ nav a{
 }
 
 .content_img img{
-    max-width: 100%;
-    min-width: 300px;
+    width: clamp(300px, 100%, 450px);
     transition: var(--transition);
 }
 
